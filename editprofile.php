@@ -11,7 +11,7 @@
   // Verifica o token, se não for o correto redireciona para a home
   $auth = new UserDAO($conn, $BASE_URL);
 
-  $userData = $auth->verifyToken();
+  $userData = $auth->verifyToken(true);
 
   $fullName = $userModel->getFullName($userData);
 
